@@ -1,0 +1,35 @@
+.nav > li {
+  display: inline-block;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+.navbar {
+    position: relative;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    min-height: 0;
+}
+
+.menu-main-container {
+  ul {
+    clear: both;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    li {
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+  a {
+    color: $menu-link-color;
+  }
+}
