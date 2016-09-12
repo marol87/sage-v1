@@ -26,3 +26,18 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+add_action('admin_bar_menu', 'add_template',  100);
+function add_template($admin_bar)
+{
+global $template;
+$templateName = str_replace(get_template_directory() . '/', '', $template);
+    $args = array(
+        'id'    => 'my-template',
+        'title' => 'Template: ' . $templateName,
+        'href'  => '#',
+        'meta'  => array( 'title' => $templateName ),
+    );
+
+ $admin_bar->add_menu( $args);
+}
